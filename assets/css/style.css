@@ -1,3 +1,17 @@
+/* 
+    Modo claro predeterminado
+*/
+:root{
+    --main-bg-color: #F1E3E4;
+    --main-text-color: #A288A6;
+    --border-color: #BB9BB0;
+    --shadow-color: #BB9BB0;
+    --mas-color: #CCBCBC;
+    --menos-color: #F1E3E4;
+    --rojo:#e27575;
+    --verde:#83e2a0;
+}
+
 * {
     transition: .8s;
     box-sizing: border-box;
@@ -8,6 +22,18 @@ html {
     height: 100%;
     line-height: 4rem;
   }
+
+#img-error{
+    display: none;
+    width: 5rem;
+    margin-right: 4.7rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    height: 4rem;
+    filter: sepia(0.5);
+    cursor: pointer;
+}
+
 #index-body{
     padding: 0;
     margin: 0;
@@ -42,23 +68,6 @@ html {
     cursor: pointer;
 
 }
-
-
-
-
-.modo-claro{
-
-    --main-bg-color: #F1E3E4;
-    --main-text-color: #A288A6;
-    --border-color: #BB9BB0;
-    --shadow-color: #BB9BB0;
-    --mas-color: #CCBCBC;
-    --menos-color: #F1E3E4;
-    --rojo:#e27575;
-    --verde:#83e2a0;
-
-}
-
 
 /* rosa pastel modo oscuro */
 .modo-oscuro{
@@ -318,10 +327,11 @@ h3{
     font-size: 5rem;
 }
 #total{
+    display: none;
     margin: 0;
 }
 #container-dinero{
-    display: flex;
+    display: none;
 }
 
 #precio-final,#cash{
