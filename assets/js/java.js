@@ -223,10 +223,10 @@ function restar10(){
 // })
 
 function playAudioPlus(){
-    new Audio('sonido_plus.wav').play();
+    new Audio('../sounds/sonido_plus.wav').play();
 }
 function playAudioLess(){
-    new Audio('sonido_less.wav').play();
+    new Audio('../sounds/sonido_less.wav').play();
     
 }
 
@@ -254,7 +254,7 @@ menos9.addEventListener('click',playAudioLess)
 menos10.addEventListener('click',playAudioLess)
 
 function playAudioCute(){
-const xd=new Audio('musica_cute.mp3');
+const xd=new Audio('../sounds/musica_cute.mp3');
 xd.play()
     // var contadorVolumen=0
     // if (empanada.classList=="animacion-cute"){
@@ -322,7 +322,7 @@ function cambiarModo(){
 
 // styles(mas0)
 function cambiarModo2(){
-    audio=new Audio('cambiar_modo.wav').play();
+    audio=new Audio('../sounds/cambiar_modo.wav').play();
 
     
 }
@@ -404,7 +404,7 @@ function cambiarHamburguesa(){
     hamburguesa0.style.color="white"
 
     btnEnviar.classList.add('none','transition_02s')
-    new Audio('sonido_final.mp3').play();
+    new Audio('../sounds/sonido_final.mp3').play();
 
     // num0=contador0.innerHTML
     // num1=contador0.innerHTML

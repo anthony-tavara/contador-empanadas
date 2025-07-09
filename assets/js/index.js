@@ -18,7 +18,7 @@ function cambiarModoIndex(){
 }
 
 function playAudioPlus(){
-    new Audio('cambiar_modo.wav').play();
+    new Audio('../sounds/cambiar_modo.wav').play();
 }
 var botonIncio=document.getElementById('boton-inicio')
 luna.addEventListener('click',playAudioPlus)
