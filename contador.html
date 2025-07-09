@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html  lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empanadas</title>
+    <script src="https://kit.fontawesome.com/b2ac5061e0.js" crossorigin="anonymous"></script>    
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="empanada.png">
+
+</head>
+<body id="contador-body" class="modo-claro">
+        <div class="contador-container">
+            <header>
+                <img id="img-empanada" src="empanada.png" onclick="cambiar()">
+                <h1 id="contador-titulo">CONTADOR<br>DE EMPANADAS</h1>
+                <a href="index.html">
+                    <i id="icono-atras" class="fa-solid fa-backward"></i>
+                </a>
+                <i id="icono-luna" class="fa-solid fa-moon"></i>
+
+
+                
+            </header>
+            
+            <div class="hamburguesas-container">
+                <div  id="hamburguesa-0" class="container-hamburguesas_div">
+                    <h2 class="hamburguesas hamburguesa-0">Carne Suave</h2>
+                    <p id="contador-0">0</p>
+                    <i id="icono-mas0" class="mas-0 fa-sharp fa-solid fa-circle-plus icono-mas reproductor" ></i>
+                    <i id="icono-menos0" class="fa-sharp fa-solid fa-circle-minus icono-menos"></i>
+                </div>    
+                <div id="hamburguesa-1" class="container-hamburguesas_div">
+                    <h2 class="hamburguesas hamburguesa-1">Carne picante</h2>
+                    <p id="contador-1" >0</p>
+                    <i id="icono-mas1" class="fa-sharp fa-solid fa-circle-plus icono-mas"></i>
+                    <i id="icono-menos1" class="fa-sharp fa-solid fa-circle-minus icono-menos"></i>
+                    </div>
+                <div id="hamburguesa-2" class="container-hamburguesas_div">
+                    <h2 class="hamburguesas hamburguesa-2">Humita</h2>
+                    <p id="contador-2" >0</p>
+                <i id="icono-mas2" class="fa-sharp fa-solid fa-circle-plus icono-mas"></i>
+                <i id="icono-menos2" class="fa-sharp fa-solid fa-circle-minus icono-menos"></i>
+                </div>
+            <div id="hamburguesa-3" class="container-hamburguesas_div">
+                <h2 class="hamburguesas hamburguesa-3">Pollo</h2>
+                <p id="contador-3" >0</p>
+                <i id="icono-mas3" class="fa-sharp fa-solid fa-circle-plus icono-mas"></i>
+                <i id="icono-menos3" class="fa-sharp fa-solid fa-circle-minus icono-menos"></i>
+            </div>
+            <div id="hamburguesa-4"  class="container-hamburguesas_div">
+                <h2 class="hamburguesas hamburguesa-4">Jamón y Queso</h2>
+                <p id="contador-4" >0</p>
+                <i id="icono-mas4" class="fa-sharp fa-solid fa-circle-plus icono-mas"></i>
+                <i id="icono-menos4" class="fa-sharp fa-solid fa-circle-minus icono-menos"></i>
+            </div>
+            <div id="hamburguesa-5" class="container-hamburguesas_div">
+                <h2 class="hamburguesas hamburguesa-5">Bondiola</h2>
+                <p id="contador-5">0</p>
+                <i id="icono-mas5" class="fa-sharp fa-solid fa-circle-plus icono-mas"></i>
+                <i id="icono-menos5" class="fa-sharp fa-solid fa-circle-minus icono-menos"></i>
+            </div>
+            <div id="hamburguesa-6" class="container-hamburguesas_div">
+                <h2 class="hamburguesas hamburguesa-6">Queso y Cebolla</h2>
+                <p id="contador-6">0</p>
+                <i id="icono-mas6" class="fa-sharp fa-solid fa-circle-plus icono-mas"></i>
+                <i id="icono-menos6" class="fa-sharp fa-solid fa-circle-minus icono-menos"></i>
+            </div>
+            <div id="hamburguesa-7" class="container-hamburguesas_div">
+                <h2 class="hamburguesas hamburguesa-7">Roquefort</h2>
+                <p id="contador-7">0</p>
+                <i id="icono-mas7" class="fa-sharp fa-solid fa-circle-plus icono-mas"></i>
+                <i id="icono-menos7" class="fa-sharp fa-solid fa-circle-minus icono-menos"></i>
+            </div>
+            <div id="hamburguesa-8" class="container-hamburguesas_div">
+                <h2 class="hamburguesas hamburguesa-8">ChesseBurguer</h2>
+                <p id="contador-8">0</p>
+                <i id="icono-mas8" class="fa-sharp fa-solid fa-circle-plus icono-mas"></i>
+                <i id="icono-menos8" class="fa-sharp fa-solid fa-circle-minus icono-menos"></i>
+            </div>
+            <div id="hamburguesa-9" class="container-hamburguesas_div">
+                <h2 class="hamburguesas hamburguesa-9">Espinaca/Queso</h2>
+                <p id="contador-9">0</p>
+                <i id="icono-mas9" class="fa-sharp fa-solid fa-circle-plus icono-mas"></i>
+                <i id="icono-menos9" class="fa-sharp fa-solid fa-circle-minus icono-menos"></i>
+            </div>
+            <div id="hamburguesa-10" class="container-hamburguesas_div">
+                <h2 class="hamburguesas hamburguesa-10">Calabaza/Queso</h2>
+                <p id="contador-10">0</p>
+                <i id="icono-mas10" id="icono-mas10" class="fa-sharp fa-solid fa-circle-plus icono-mas"></i>
+                <i id="icono-menos10" class="fa-sharp fa-solid fa-circle-minus icono-menos"></i>
+            </div>
+            </div>
+            <div id="footer">
+                <h3>TOTAL EMPANADAS</h3><p id="contador-general"></p>
+                <input id="input-precio" type="text" placeholder="Inserte Precio">
+                <a >
+                    <button  id="boton-enviar"href="resumen.html">FINISH</button>
+                </a>
+                
+
+                <h3 id="total">TOTAL PRECIO</h3>
+                <div id="container-dinero">
+                    <p id="cash">$</p><P id="precio-final"></P>
+                </div>
+                
+                <a href="contador.html">
+                    <button  id="boton-reinicio"href="resumen.html" class="none">RESTART</button>
+                </a>
+                
+
+            </div>
+            
+        </div>
+    <script src="java.js"></script>
+</body>
+</html>
