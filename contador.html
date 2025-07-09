@@ -12,10 +12,10 @@
     <link rel="icon" type="image/png" href="assets/images/empanada.png">
 
 </head>
-<body id="contador-body" class="modo-claro">
+<body id="contador-body">
         <div class="contador-container">
             <header>
-                <img id="img-empanada" src="assets/images/empanada.png" onclick="cambiar()">
+                <img id="img-empanada" src="assets/images/empanada.png">
                 <h1 id="contador-titulo">CONTADOR<br>DE EMPANADAS</h1>
                 <a href="index.html">
                     <i id="icono-atras" class="fa-solid fa-backward"></i>
@@ -31,21 +31,24 @@
                 <a >
                     <button  id="boton-enviar"href="resumen.html">FINISH</button>
                 </a>
-                
 
                 <h3 id="total">TOTAL PRECIO</h3>
                 <div id="container-dinero">
                     <p id="cash">$</p><P id="precio-final"></P>
                 </div>
+
+                <img id="img-error" src="assets/images/error.png">
                 
                 <a href="contador.html">
                     <button  id="boton-reinicio"href="resumen.html" class="none">RESTART</button>
                 </a>
-                
-
             </div>
             
         </div>
-    <script src="assets/js/contadores.js"></script>
+    <script src="assets/js/general.js"></script>
+    <script src="assets/js/sounds.js"></script>
+    <script src="assets/js/lista_empanadas.js"></script>
+    <script src="assets/js/contador.js"></script>
+
 </body>
 </html>
