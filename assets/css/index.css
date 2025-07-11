@@ -1,0 +1,42 @@
+:root{
+    --color-bg: var(--color-primary);
+}
+
+/* Presentacion */
+.principal{
+    text-align: center;
+    justify-content: center;
+}
+
+body{
+    background: var(--linear-gradient);
+}
+.presentacion{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-shadow: var(--text-shadow);
+    gap: 1rem;
+}
+.presentacion__titulo{
+    font-size: 3rem;
+    margin: 0;
+}
+.presentacion__version{
+    font-size: 2rem;
+    color: var(--color-secundary);
+}
+.presentacion__pregunta{
+    font-weight: 600;
+    font-size: 2rem;
+    color: var(--color-secundary);
+}
+.presentacion__opciones{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    background: none;
+}
+.presentacion__opciones__boton{
+    background-color: var(--color-secundary);
+}
