@@ -1,13 +1,9 @@
 function lista_agregar(lista, elemento){
-    if(!lista || !elemento)
-        return
-
+    if(!lista || !elemento) return
     lista.push(elemento)
 }
 function contador_actualizar(contador, valor){
-    if(!contador)
-        return
-    
+    if(!contador) return
     contador.textContent = valor
 }
 
@@ -24,21 +20,21 @@ lista_agregar(lista_empanadas, {name: "Espinaca-Queso", quantity:0})
 lista_agregar(lista_empanadas, {name: "Calabaza-Queso", quantity:0})
 lista_agregar(lista_empanadas, {name: "Pollo BBQ", quantity:0})
 
-const container = document.querySelector(".hamburguesas-container")
+const container = document.getElementById("lista-empanadas")
 
 let index = 0
 lista_empanadas.forEach(element => {
     let empanada = document.createElement("div")
-    empanada.classList.add("container-hamburguesas_div")
-    empanada.innerHTML =     `<h2 class="hamburguesas hamburguesa-${index}">${element.name}</h2>
-    <p id="contador-${index}" class="contador">0</p>
-    <i id="icono-mas${index}" class="icono-mas fa-sharp fa-solid fa-circle-plus icono-mas reproductor" ></i>
-    <i id="icono-menos${index}" class="fa-sharp fa-solid fa-circle-minus icono-menos"></i>`
+    empanada.classList.add("lista__elemento")
+    empanada.innerHTML =     `<h2 class="elemento__nombre">${element.name}</h2>
+    <p class="elemento__contador">0</p>
+    <i class="elemento__icono elemento__icono--agregar icono-mas fa-sharp fa-solid fa-circle-plus icono-mas reproductor" ></i>
+    <i class="elemento__icono elemento__icono--sacar icono-menos fa-sharp fa-solid fa-circle-minus"></i>`
 
     let boton_agregar = empanada.querySelector(".icono-mas")
     let boton_sacar = empanada.querySelector(".icono-menos")
 
-    let contador = empanada.querySelector(".contador")
+    let contador = empanada.querySelector(".elemento__contador")
     let intervalo
 
     evento_agregar(boton_agregar, "click", () =>{
@@ -69,7 +65,7 @@ lista_empanadas.forEach(element => {
             return
 
         element.quantity--
-        let contador = empanada.querySelector(".contador")
+        let contador = empanada.querySelector(".elemento__contador")
         contador_actualizar(contador, element.quantity)
     })
 
@@ -103,55 +99,65 @@ lista_empanadas.forEach(element => {
     index++
 });
 
-const boton_enviar_lista = document.getElementById('boton-enviar')
+const boton_enviar_lista = document.getElementById('boton-mostrar-resumen')
 const botones_agregar = document.querySelectorAll(".icono-mas")
 const botones_sacar = document.querySelectorAll(".icono-menos")
+const empanadas = document.querySelectorAll(".lista__elemento")
 
-const empanadas = document.querySelectorAll(".container-hamburguesas_div")
+const resumen = document.getElementById("resumen-pedido")
+const total = document.querySelector(".resumen__total")
+const input_precio = document.getElementById("precio-input")
+const boton_reinicio = document.getElementById("boton-reiniciar")
 
-const container_precio_final = document.getElementById("container-dinero")
-const total = document.getElementById("total")
-const h3_total = document.querySelector("h3")
-const input_precio = document.getElementById("input-precio")
-const boton_reinicio = document.getElementById("boton-reinicio")
-
-const precio_final = document.getElementById("precio-final")
-const cash = document.getElementById("cash")
-
-const img_error = document.getElementById("img-error")
+const precio_final = document.getElementById("precio-total")
+const configuracion_precio = document.getElementById("configuracion-precio")
+const img_error = document.getElementById("imagen-error")
 
 evento_agregar(boton_enviar_lista, "click", () => {
-    console.log(empanadas)
-
     empanadas.forEach(empanada => {
-        console.log(empanada)
+        botones_agregar.forEach(boton => boton.classList.add("hidden"));
+        botones_sacar.forEach(boton => boton.classList.add("hidden"));
 
-        botones_agregar.forEach(boton => boton.style.display = "none");
-        botones_sacar.forEach(boton => boton.style.display = "none");
-
-        let contador = empanada.querySelector(".contador")
+        let contador = empanada.querySelector(".elemento__contador")
         if(contador.innerText == "0")
-            empanada.style.display = "none"
+            empanada.classList.add("hidden")
     });
 
-    let gasto = parseInt(input_precio.value)
-    if(isNaN(gasto)){
-        cash.style.display = "none"
-        total.style.display = "none"
-        precio_final.innerText = "No ingreso correctamente el monto."
-        precio_final.style.color="#e27575"
-        precio_final.style.fontSize ="2rem"
-    }
-    else{
-        precio_final.innerText = gasto
-        total.style.display = "block"
-    }
+    let precio_empanada = parseInt(input_precio.value)
+    let contadores = document.querySelectorAll(".elemento__contador")
 
-    h3_total.style.display = "none"
-    input_precio.style.display = "none"
+    let total_cantidad = 0
+    let empanadas_cantidad = 0
+    contadores.forEach(contador => {
+        contador.style.gridColumn = "10";
+        total_cantidad += parseInt(contador.innerText) * precio_empanada
+        if(parseInt(contador.innerText) != 0)
+            empanadas_cantidad++
+    });
 
-    container_precio_final.style.display = "flex"
-    boton_reinicio.style.display = "block"
-    boton_enviar_lista.style.display = "none"
-    img_error.style.display = "block"
+    if(!isNaN(total_cantidad) && empanadas_cantidad != 0){
+        precio_final.innerText = total_cantidad
+    }else{
+        total.style.color="#F87171"
+        img_error.classList.remove("hidden")
+
+        if(isNaN(total_cantidad) && empanadas_cantidad == 0)
+            total.innerHTML = "No ingreso correctamente el precio <br>Ni ninguna empanada"
+        else if(isNaN(total_cantidad))
+            total.innerText = "No ingreso correctamente el precio"
+        else
+            total.innerText = "No ingreso ninguna empanada"
+    }
+    configuracion_precio.classList.add("hidden")
+    resumen.insertBefore(container, total);
+    resumen.classList.remove("hidden")
+    sonido_reproducir(sonido_enviar_lista, 0, .5, false)
+})
+
+evento_agregar(boton_reinicio, "click", () => {
+    sonido_reproducir(sonido_enviar_lista, .01, .5, false)
+
+    setTimeout(() => {
+        location.reload()
+    }, 250);
 })
