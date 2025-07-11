@@ -1,0 +1,30 @@
+/* Modo claro predeterminado */
+:root { 
+    --color-primary: #F59E0B; 
+    --color-secundary: #fff8de;
+    --color-error: #EF4444; 
+    --color-success: #10B981; 
+    --color-bg: #ffffff; 
+    --color-text: #1F2937; 
+    --color-text-secundary: #ffffff;
+    --contador-background: #F3F4F6;
+    --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    --icon-shadow: #F59E0B;
+    --linear-gradient: linear-gradient(135deg, var(--color-primary), var(--color-secundary));
+} 
+
+.modo-oscuro{
+    --color-primary: #3b82f6;
+    --color-secundary: #1e293b;
+    --color-error: #ef4444;
+    --color-success: #10b981;
+    --color-bg: #0f172a;
+    --color-text: #e2e8f0;
+    --color-text-secundary: #ffffff;
+    --contador-background: rgba(59, 130, 246, 0.1);
+    --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+    --text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    --icon-shadow: rgba(59, 130, 246, 0.3);
+    --linear-gradient: linear-gradient(135deg, var(--color-primary), var(--color-secundary));
+}
