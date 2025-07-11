@@ -37,10 +37,8 @@ const esloganes = [
 let i = 0
 setInterval(() => {
     eslogan.innerText = esloganes[i++ % esloganes.length]
-}, 10000);
+}, 8000);
 
-let mostrando_eslogan = true
 setInterval(() => {
-    eslogan.style.opacity = mostrando_eslogan ? "0" : "1";
-    mostrando_eslogan = !mostrando_eslogan;
-}, 5000);
+    eslogan.classList.toggle("opacity")
+}, 4000);
