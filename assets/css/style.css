@@ -5,10 +5,9 @@
     --main-bg-color: #F1E3E4;
     --main-text-color: #A288A6;
     --border-color: #BB9BB0;
-    --shadow-color: rgba(178, 140, 180, 0.5); /* sombra con transparencia */
+    --shadow-color: #BB9BB0;
     --mas-color: #CCBCBC;
-    --menos-color: #f9cccc; /* rojo muy claro */
-    --amarillo-acento: #fef3b3;
+    --menos-color: #F1E3E4;
     --rojo:#e27575;
     --verde:#83e2a0;
 }
