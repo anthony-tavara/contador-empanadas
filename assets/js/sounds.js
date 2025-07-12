@@ -1,6 +1,6 @@
 const sonido_agregar = new Audio("assets/sounds/sonido_plus.wav")
 const sonido_sacar = new Audio("assets/sounds/sonido_less.wav")
-const sonido_fondo = new Audio('assets/sounds/musica_cute.mp3')
+const sonido_fondo = new Audio('assets/sounds/HarrisHeller_RadiantVibes.wav')
 const sonido_enviar_lista = new Audio('assets/sounds/sonido_final.mp3')
 const sonido_cambiar_modo_colores = new Audio('assets/sounds/cambiar_modo.wav')
 
