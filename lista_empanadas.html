@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html  lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empanadas</title>
+    <script src="https://kit.fontawesome.com/b2ac5061e0.js" crossorigin="anonymous"></script>    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/images/empanada.png">
+
+    <link rel="stylesheet" href="assets/css/colores.css">
+    <link rel="stylesheet" href="assets/css/general.css">
+    <link rel="stylesheet" href="assets/css/lista_empanadas.css">
+
+<!-- Fuente -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <img id="imagen-empanada" class="header__imagen" src="assets/images/empanada.png" alt="imagen de empanada">
+        <div id="contenedor-titulo" class="header__contenedor">
+            <h1 id="titulo" class="header__titulo">Pedido Empanadas</h1>
+            <p id="eslogan" class="header__eslogan">Innovando el pedido de empanadas</p> <!-- Mejor usar p ya que es para rotacion de eslogan -->
+        </div>
+        <a href="index.html">
+            <i id="icono-retroceder" class="header__icono header__icono--retroceder fa-solid fa-backward" aria-hidden="true"></i>
+        </a>
+        <i id="cambiar-modo-oscuro" class="header__icono header__icono--modo-oscuro fa-solid fa-moon" aria-hidden="true"></i>
+    </header>
+
+    <main class="principal">
+        <section id="lista-empanadas" class="lista">
+            <!-- Contenido rellenado por javascript -->
+        </section>
+
+        <section id="configuracion-precio" class="configuracion">
+            <label class="configuracion__label" for="precio-input">Precio</label>
+            <input class="configuracion__input" id="precio-input" type="number" placeholder="Ej: 1000">
+            <button class="boton configuracion__boton" id="boton-mostrar-resumen">Mostrar Resumen</button>
+        </section>
+
+        <!-- Esto esta oculto, hasta que haga click en mostrar resumen -->
+        <section id="resumen-pedido" class="resumen hidden">
+            <h2 class="resumen__titulo" >Resumen</h2>
+            <p class="resumen__total">Precio Total: <span class="total__simbolo">$</span><span id="precio-total" class="total__cantidad">0</span></p>
+            <img id="imagen-error" class="resumen__error hidden" src="assets/images/error.png" alt="imagen-error">
+            <button id="boton-reiniciar" class="boton resumen__reiniciar">Reiniciar</button>
+        </section>
+    </main>
+
+    <footer id="footer" class="footer">
+        <p id="copyright" class="footer__copyright">Hecho por Anthony Távara<br>© 2025</p>
+        <div id="contacto" class="footer__contacto">
+            <a href="https://www.linkedin.com/in/anthony-gabriel-tavara-castilllo-a24438340/">
+                <img id="contacto-linkedin" class="contacto__icono contacto__icono--linkedin" src="assets/images/linkedin.png" alt="icono-linkedin">
+            </a>
+            <a href="https://github.com/anthony-tavara">
+                <img id="contacto-github" class="contacto__icono contacto__icono--github" src="assets/images/github.png" alt="icono-github">
+            </a>
+        </div>
+    </footer>
+
+    <script src="assets/js/general.js"></script>
+    <script src="assets/js/sounds.js"></script>
+    <script src="assets/js/lista_empanadas.js"></script>
+    <script src="assets/js/contador.js"></script> 
+</body>
+</html>

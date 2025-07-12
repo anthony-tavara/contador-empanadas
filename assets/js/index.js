@@ -1,0 +1,1 @@
+const boton_iniciar_modo_simple = document.getElementById("boton-modo-simple")
