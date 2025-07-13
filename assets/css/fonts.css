@@ -1,0 +1,20 @@
+/* Nunito */
+@font-face {
+    font-family: 'Nunito';
+    src: url('../fonts/Nunito-VariableFont_wght.ttf') format('truetype');
+    font-weight: 200 1000;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('../fonts/Nunito-ItalicVariableFont_wght.ttf') format('truetype');
+    font-weight: 200 1000;
+    font-style: italic;
+}
+
+/* Font Awesome */
+@font-face {
+    font-family: 'Font Awesome 6 Free';
+    src: url('../fonts/free-fa-solid-900.woff2') format('woff2');
+}
